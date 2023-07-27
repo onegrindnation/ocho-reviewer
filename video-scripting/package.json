@@ -1,0 +1,10 @@
+{
+    "name": "video-script",
+    "version": "1.0.0",
+    "description": "Scripts control of video playback in the browser!",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+      "/dist"
+    ]
+  }
