@@ -29,49 +29,46 @@ Other viewers may comment on the video by time-stamp and these comments will rep
 
 ```
 {
-    "url": <youtube-url>,
-    "start-with": <set-label>,
+    "video-provider": "youtube",
+    "video-id": <video url parth>
+    "participants": [
+        {
+            "reviewer-id": <id>,
+            "name": <name>,
+            "external-id": <id for repository other than ocho api>,
+            "external-name": <name from the external repository>
+        }, ...
+    ],
     "sets": [
         {
-            "fighters": [
-                {
-                    "x": <% x offset>,
-                    "y": <% y offset>,
-                    "name": <name>,
-                    "review-fighter-name": <guid>,
-                    "ork-id": <ork-mundane-id>,
-                    "style-id": <style-id>,
-                    "style": <style>
-                }, ...
-            ],
             "label": <label>,
-            "description": <description>
-            "game": {
-                "game": <game: amtgard, bel, private>,
+            "description": <description>,
+            "associaation": {
+                "name": <game: amtgard, bel, private>,
                 "major": <kingdom, etc>,
                 "minor": <park, unit>
             },
             "occasion": <event name or type, e.g. practice>,
             "date": <datetime utc>,
-            "next": {
-                "to": <label>,
-                "transition": <transition>
-            },
-            "start": <"auto", "manual">,
-            "start-with": <chapter-label>,
             "chapters": [
                 {
-                    "fighters": <fighters (above)>,
+                    "participants": [
+                        {
+                            "id": <reviewer-id from above>,
+                            "x": <relative x position 0..1>,
+                            "y": <relative y position 0..1>,
+                            "style-id": <style id>,
+                            "style": <name for style>
+                        }, ...
+                    ],
                     "label": <label>,
                     "description": <description>,
                     "playback-speed": <speed>,
                     "start-at": <seconds>,
                     "end-at": <seconds>,
-                    "next": <next (above)>,
-                    "max-play": <int or "forever">,
                     "annotation": {
-                        "x": <% x offset>,
-                        "y": <% y offset>,
+                        "x": <% x offset 0..1>,
+                        "y": <% y offset 0..1>,
                         "note": <note>
                     }
                 }
