@@ -1,0 +1,11 @@
+.DS_Store
+review/node_modules
+review/build
+review/.svelte-kit
+review/package
+review/.env
+review/.env.*
+review/!.env.example
+review/vite.config.js.timestamp-*
+review/vite.config.ts.timestamp-*
+video-scripting/dist/*
