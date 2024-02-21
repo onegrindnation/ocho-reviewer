@@ -53,7 +53,7 @@
         let apiRequest = new XMLHttpRequest();
  
         // Making our connection 
-        let url = 'http://localhost:8080/api/reviews/review/ObpDW+aMRpqVjgAAhqU5tw==';
+        let url = 'http://localhost:13080/api/reviews/review/ObpDW+aMRpqVjgAAhqU5tw==';
         apiRequest.open("GET", url, true);
 
         // function execute after request is successful
